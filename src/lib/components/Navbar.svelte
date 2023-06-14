@@ -18,9 +18,14 @@
 		{
 			title: 'Contact',
 			href: '/contact'
+		},
+		{
+			title: 'Blog',
+			href: '/blog'
 		}
 	];
 	$: routeId = $page.route.id;
+	$: url = $page.url.href;
 </script>
 
 <nav>
@@ -29,7 +34,9 @@
 		<ul>
 			{#each navs as { title, href }}
 				<li>
-					<a {href} class:active={routeId == href} {title}>{title}</a>
+					<a {href} class:active={href === '/' ? routeId === href : url.includes(href)} {title}
+						>{title}</a
+					>
 				</li>
 			{/each}
 		</ul>

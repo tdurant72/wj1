@@ -1,12 +1,21 @@
 <script>
 	import '../styles/style.css';
-	import Navbar from '../components/Navbar.svelte';
-	import Footer from '../components/Footer.svelte';
-	import Hero from '../components/Hero.svelte';
+	import Navbar from '$lib/components/Navbar.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<Navbar />
-<Hero />
-<slot />
+<div class="app">
+	<Navbar />
 
-<Footer />
+	<slot />
+
+	<Footer />
+</div>
+
+<style>
+	.app {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+</style>

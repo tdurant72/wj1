@@ -1,9 +1,8 @@
 <script>
 	import { enhance, applyAction } from '$app/forms';
-	// import Button from "$lib/Button.svelte";
-	// import Seo from "$lib/Seo.svelte";
+	import Button from '$lib/components/Button.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 	export let form;
-	import Button from '../../components/Button.svelte';
 </script>
 
 <div class="container">
@@ -82,11 +81,7 @@
 	{/if}
 </div>
 
-<!-- <Seo
-    title="Contact | Business Frontpage"
-    description="This is contact page"
-    type="WebPage"
-  /> -->
+<Seo title="Contact | Big4Bio" description="Big4Bio contact page" type="WebPage" />
 
 <style>
 	.container {

@@ -1,5 +1,5 @@
 <script>
-	import What from '../components/What.svelte';
+	import What from '$lib/components/What.svelte';
 
 	export let data;
 	const { posts } = data;
@@ -11,15 +11,21 @@
 		<p>Loading...</p>
 	{:then data}
 		<div class="grid">
-			{#each posts as { title, url }}
+			{#each posts as { title, image, body }}
 				<div>
-					<img src={url} alt={title} />
-					<p>{title}</p>
+					<h5>{title.substring(0, 20)}</h5>
+					<img src={image} alt={title} />
+					<p>{body.substring(0, 100)}</p>
 				</div>
 			{/each}
 		</div>
 	{/await}
 </div>
+
+<svelte:head>
+	<title>Big Bio Start</title>
+	<meta name="description" content="Big4Bio is a biotech newsletter and information company." />
+</svelte:head>
 
 <style>
 	.grid {
