@@ -17,8 +17,10 @@
 	}
 	.medium {
 		padding: 0.5em 1.5em;
+		font-size: 1.2rem;
 	}
 	.small {
 		padding: 0.25em 0.5em;
+		font-size: 0.75ren;
 	}
 </style>

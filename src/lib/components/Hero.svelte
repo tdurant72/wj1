@@ -10,12 +10,12 @@
 
 <style>
 	.hero {
-		background-color: cornflowerblue;
+		background-color: var(--primary-color);
 		padding: 5em 0;
 	}
 	.hero h2 {
 		margin: 0;
-		font-size: 3.5em;
+		font-size: 4.1em;
 		font-weight: 500;
 		color: white;
 	}
